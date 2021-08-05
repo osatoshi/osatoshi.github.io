@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
+  <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+        type="application/javascript"></script>
 <body>
 <h1>ねえ、これは修のウェブサイトです👋🏻</h1>
+  <script>
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
+
+    // The Metamask plugin also allows signing transactions to
+    // send ether and pay to change state within the blockchain.
+    // For this, you need the account signer...
+    const signer = provider.getSigner()
+  </script>
 </body>
 </html>
